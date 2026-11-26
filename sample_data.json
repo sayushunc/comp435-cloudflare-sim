@@ -1,0 +1,40 @@
+{
+  "initial_accounts": {
+    "okta_svc_admin": {
+      "role": "admin",
+      "active": true,
+      "created_by": "system_init",
+      "permissions": ["read_jira","read_confluence","read_bitbucket","create_account"]
+    }
+  },
+  "sample_documents": [
+    {
+      "id": "DOC-JIRA",
+      "name": "Jira Tickets",
+      "system": "Jira",
+      "trust_zone": "internal_atlassian",
+      "required_permission": "read_jira"
+    },
+    {
+      "id": "DOC-CONF",
+      "name": "Confluence Wiki",
+      "system": "Confluence",
+      "trust_zone": "internal_atlassian",
+      "required_permission": "read_confluence"
+    },
+    {
+      "id": "REPO-BITBUCKET",
+      "name": "Bitbucket Repos",
+      "system": "Bitbucket",
+      "trust_zone": "internal_atlassian",
+      "required_permission": "read_bitbucket"
+    },
+    {
+      "id": "SYS-PROD",
+      "name": "Global Network & Customer Data",
+      "system": "Production_Network",
+      "trust_zone": "zero_trust_production",
+      "required_permission": "prod_hardware_mfa"
+    }
+  ]
+}
